@@ -1,7 +1,9 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import Cart from "./Cart";
-import { Button } from "@mantine/core";
+
+import { Link } from "react-router-dom";
+
 
 const AddToCart = () => {
   const { cartItems, totalAmount } = useSelector((state) => state.cart);
@@ -20,9 +22,11 @@ const AddToCart = () => {
           <p className=" text-emerald-900 font-serif text-3xl">
             Ur Item is Empty:(
           </p>
-          <button className=" bg-emerald-800 text-white px-6 mt-2 py-1 rounded-3xl hover:bg-emerald-600">
-            Fill It
-          </button>
+          <Link to={"/"}>
+            <button className=" bg-emerald-800 text-white px-6 mt-2 py-1 rounded-3xl hover:bg-emerald-600">
+              Fill It
+            </button>
+          </Link>
         </div>
       ) : (
         <div className=" flex justify-around align-middle">
