@@ -33,15 +33,12 @@ const Product = (props) => {
           readOnly
         />
       </div>
-      <div className=" mt-3 flex justify-between">
+      <div className=" animate__animated animate__headShake animate__infinite mt-3  flex justify-center">
         <button
           onClick={() => dispatch(addToCart(props))}
-          className=" bg-slate-50 border border-emerald-900 rounded-2xl px-[10px] py-1 hover:bg-emerald-900 hover:text-white"
+          className=" bg-slate-50 border border-emerald-900 rounded-md w-full py-1 hover:bg-emerald-900 hover:text-white"
         >
           Add To Cart
-        </button>
-        <button className=" bg-slate-50 border border-emerald-900 rounded-2xl px-[10px] py-1 hover:bg-emerald-900 hover:text-white">
-          Details
         </button>
       </div>
     </div>
